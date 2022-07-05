@@ -26,4 +26,4 @@ El endpoint para recuperar la información de los empleados de la base de datos 
 > http://localhost:8080/apiv1/empleados/findall
 
 ***
-![img](https://imgur.com/a/JAbhGAy)
+![img](https://imgur.com/a/JAbhGAy.png)
