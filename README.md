@@ -25,5 +25,3 @@ El endpoint para agregar un nuevo empleado es el siguiente:
 El endpoint para recuperar la información de los empleados de la base de datos es el siguiente:
 > http://localhost:8080/apiv1/empleados/findall
 
-***
-![img](https://imgur.com/a/JAbhGAy.png)
