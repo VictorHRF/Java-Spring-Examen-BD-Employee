@@ -18,7 +18,7 @@ import com.example.springboot.app.model.Airport;
 import com.example.springboot.app.service.AirportService;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("apiv1")
 public class AirportController {
 
 	@Autowired

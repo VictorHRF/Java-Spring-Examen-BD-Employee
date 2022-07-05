@@ -18,7 +18,7 @@ import com.example.springboot.app.model.Country;
 import com.example.springboot.app.service.CountryService;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("apiv1")
 public class CountryController {
 
 	@Autowired

@@ -6,6 +6,8 @@ import com.example.springboot.app.model.Employee;
 
 public interface EmployeeService {
 	
+	Employee addEmployee(Employee employee);
+	
 	Employee findEmployeeById(long employeeId);
 	
 	List<Employee> findAllEmployee();

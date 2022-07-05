@@ -18,7 +18,7 @@ import com.example.springboot.app.model.Language;
 import com.example.springboot.app.service.LanguageService;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("apiv1")
 public class LanguageController {
 	
 	@Autowired

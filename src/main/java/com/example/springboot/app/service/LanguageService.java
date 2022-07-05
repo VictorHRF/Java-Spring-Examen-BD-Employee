@@ -5,6 +5,8 @@ import java.util.List;
 import com.example.springboot.app.model.Language;
 
 public interface LanguageService {
+	
+	Language addLanguage(Language language);
 
 	Language findLanguageById(long languageId);
 	

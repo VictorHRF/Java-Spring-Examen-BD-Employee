@@ -5,6 +5,8 @@ import java.util.List;
 import com.example.springboot.app.model.Airport;
 
 public interface AirportService {
+	
+	Airport addAirport(Airport airport);
 
 	Airport findAirportById(long airportId);
 	

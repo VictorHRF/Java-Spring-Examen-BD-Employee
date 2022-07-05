@@ -19,6 +19,12 @@ public class LanguageServiceImpl implements LanguageService {
 	private LanguageRepository languageRepository;
 	
 	@Override
+	public Language addLanguage(Language language) {
+		// TODO Auto-generated method stub
+		return languageRepository.save(language);
+	}
+	
+	@Override
 	public Language findLanguageById(long languageId) {
 		
 		Optional<Language> languageDb = this.languageRepository.findById(languageId);

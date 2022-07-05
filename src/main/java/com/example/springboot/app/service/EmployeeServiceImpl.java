@@ -19,6 +19,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 	private EmployeeRepository employeeRepository;
 	
 	@Override
+	public Employee addEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		return employeeRepository.save(employee);
+	}
+	
+	@Override
 	public Employee findEmployeeById(long employeeId) {
 		
 		Optional<Employee> employeeDb = this.employeeRepository.findById(employeeId);
@@ -56,7 +62,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		if(employeeDb.isPresent()) {
 			Employee employeeUpdate = employeeDb.get();
 			employeeUpdate.setSurname(employee.getSurname());
-			employeeUpdate.setFistname(employee.getFistname());
+			employeeUpdate.setFistname(employee.getFirstname());
 			employeeRepository.save(employeeUpdate);
 			return employeeUpdate;
 		}else {

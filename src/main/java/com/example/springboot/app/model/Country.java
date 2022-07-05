@@ -13,6 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
@@ -20,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 public class Country {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	@Column(name = "code")
@@ -30,7 +31,8 @@ public class Country {
 	private String name;
 	
 	@ManyToOne
-	private Employee employeeCountry;
+	@JsonBackReference
+	private Employee ownerCountry;
 	
 	@OneToMany(mappedBy = "country", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JsonManagedReference
@@ -59,13 +61,13 @@ public class Country {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public Employee getEmployeeCountry() {
-		return employeeCountry;
+	
+	public Employee getOwnerCountry() {
+		return ownerCountry;
 	}
 
-	public void setEmployeeCountry(Employee employeeCountry) {
-		this.employeeCountry = employeeCountry;
+	public void setOwnerCountry(Employee ownerCountry) {
+		this.ownerCountry = ownerCountry;
 	}
 
 	public java.util.List<Airport> getAirports() {

@@ -5,6 +5,8 @@ import java.util.List;
 import com.example.springboot.app.model.Country;
 
 public interface CountryService {
+	
+	Country addCountry(Country country);
 
 	Country findCountryById(long countryId);
 	

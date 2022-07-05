@@ -18,6 +18,13 @@ public class CountryServiceImpl implements CountryService {
 	@Autowired
 	private CountryRepository countryRepository;
 	
+	
+	@Override
+	public Country addCountry(Country country) {
+		// TODO Auto-generated method stub
+		return countryRepository.save(country);
+	}
+	
 	@Override
 	public Country findCountryById(long countryId) {
 		

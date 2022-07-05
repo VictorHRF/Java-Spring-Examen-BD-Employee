@@ -8,12 +8,14 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 @Table(name="Language")
 public class Language {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	@Column(name = "code")
@@ -23,7 +25,8 @@ public class Language {
 	private String name;
 	
 	@ManyToOne
-	private Employee employee;
+	@JsonBackReference
+	private Employee owner;
 
 	public long getId() {
 		return id;
@@ -49,12 +52,12 @@ public class Language {
 		this.name = name;
 	}
 
-	public Employee getEmployee() {
-		return employee;
+	public Employee getOwner() {
+		return owner;
 	}
 
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
+	public void setOwner(Employee owner) {
+		this.owner = owner;
 	}
 	
 

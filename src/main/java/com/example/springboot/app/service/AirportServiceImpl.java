@@ -19,6 +19,12 @@ public class AirportServiceImpl implements AirportService {
 	private AirportRepository airportRepository;
 	
 	@Override
+	public Airport addAirport(Airport airport) {
+		// TODO Auto-generated method stub
+		return airportRepository.save(airport);
+	}
+	
+	@Override
 	public Airport findAirportById(long airportId) {
 		
 		Optional<Airport> airportDb = this.airportRepository.findById(airportId);
